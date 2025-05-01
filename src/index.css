@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Exo", sans-serif;
+}
+
+.start-btn::before{
+  content: '';
+  border: 2px solid hsl(158, 98%, 43%);
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 12px hsl(158, 98%, 43%);
+  transition: .3s;
+  animation: button 3s infinite;
+}
+
+.swiper-pagination-bullet {
+  background-color: #9ca3af !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: hsl(219, 69%, 56%) !important;
+}
+
+@keyframes button {
+  0% {
+    box-shadow: 0 0 12px hsl(158, 98%, 43%);
+  }
+  50% {
+    box-shadow: 0 0 24px hsl(158, 98%, 43%);
+  }
+}
+
+@layer components {
+  .max-container {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
